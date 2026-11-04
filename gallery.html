@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>プロジェクト | ジャン・ヒョンソク</title>
+  <title>取り組み | ジャン・ヒョンソク</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Noto+Sans+JP:wght@400;500;700&display=swap">
@@ -16,7 +16,7 @@
     <nav class="gnav">
       <ul>
         <li><a href="work.html">職務経歴</a></li>
-        <li><a href="gallery.html">プロジェクト</a></li>
+        <li><a href="gallery.html">取り組み</a></li>
         <li><a href="index.html#contact">連絡先</a></li>
       </ul>
     </nav>
@@ -25,8 +25,7 @@
   <main class="sec" style="padding-top:50px">
     <div class="inner">
       <div class="sec-title">
-        <h2>Projects</h2>
-        <span>プロジェクト</span>
+        <h2>取り組み</h2>
       </div>
 
       <nav class="filter">
@@ -34,6 +33,7 @@
         <a href="#payment">決済・課金</a>
         <a href="#ai">AI活用・新規開発</a>
         <a href="#dx">開発者体験</a>
+        <a href="#personal">個人開発</a>
       </nav>
 
       <p class="dots" aria-hidden="true">・・・</p>
@@ -106,7 +106,7 @@
         <article class="case">
           <h4>AIキャラクターチャットサービスの新規開発</h4>
           <dl>
-            <dt>課題</dt><dd>新規事業として、AIキャラクターチャットサービスを1人で立ち上げる</dd>
+            <dt>課題</dt><dd>個人で開発していたAIキャラクターチャットをもとに、新規事業として1人で立ち上げる</dd>
             <dt>対応</dt><dd>コンセプト策定・要件定義・画面/DB設計から、React / Next.js / NestJSでの開発、Stripe決済・Google OAuth認証まで担当。クローズドβ／オープンβのフィードバックでUI・機能を改善し、クリエイター3名の募集、仕様書・損益計算書の作成、法務調査も実施</dd>
             <dt>インフラ</dt><dd>AWS上で、CloudFront（WAF）・ALBの配下にNext.js / NestJSを載せたEC2をMulti-AZのAuto Scalingで構成し、データはRDS（PostgreSQL）とElastiCache（Redis）に分離。重い処理はSQS（DLQ付き）経由でbatch-workerに非同期で処理させ、画像はS3から配信。LLM API（OpenAI・Anthropic・Google Gemini）はストリーミングで応答を返す。CI/CDはGitHub Actionsでビルドし、ECRへのイメージpush、CloudFrontのキャッシュ無効化、Playwrightでのチェックまでを自動化</dd>
             <dt>結果</dt><dd>開発は完了したものの、運営・マーケティング体制が整わず事業判断で停止。費用が発生しないようAWSの関連リソースを整理</dd>
@@ -170,6 +170,23 @@
           <div class="case-figs">
             <figure><img src="images/branch-create.png" alt="リリースブランチ作成のコード例" loading="lazy"><figcaption>ブランチ作成のコード例</figcaption></figure>
             <figure><img src="images/branch-delete.png" alt="リリースブランチ削除のコード例" loading="lazy"><figcaption>ブランチ削除のコード例</figcaption></figure>
+          </div>
+        </article>
+      </section>
+
+      <p class="dots" aria-hidden="true">・・・</p>
+      <section class="g-block" id="personal">
+        <h3>個人開発</h3>
+
+        <article class="case">
+          <h4>AIキャラクターチャット（個人開発版）</h4>
+          <dl>
+            <dt>経緯</dt><dd>個人で開発していたものが社内の新規事業として採用され、事業化が見送られた後は、個人開発として継続。ターゲットを日本から韓国に移し、現在は韓国語で提供</dd>
+            <dt>対応</dt><dd>1人で運用できるよう、EC2 1台にDocker Composeでフロントエンド（Next.js）・API（NestJS＋cronバッチ）・PostgreSQL・Redisをまとめた低コスト構成に。CloudFrontでWebと /api を振り分け、画像はS3に保存。韓国向けに決済をPortOne・KPN・Stripe、本人確認をNICEに対応し、Sentryでエラーを監視。GitHub Actionsでビルドし、ECRへのイメージpush、CloudFrontのキャッシュ無効化、Playwrightでのチェックまでを自動化</dd>
+            <dt>結果</dt><dd>韓国向けに公開中　<a href="https://ppanrangi.com/" target="_blank" rel="noopener">サービスを見る（韓国語）</a></dd>
+          </dl>
+          <div class="case-figs">
+            <figure><img src="images/ai-chat-personal-architecture.png" alt="AIキャラクターチャット個人開発版のAWSシステムアーキテクチャ" loading="lazy"><figcaption>システムアーキテクチャ（個人開発版）</figcaption></figure>
           </div>
         </article>
       </section>

@@ -16,7 +16,7 @@
     <nav class="gnav">
       <ul>
         <li><a href="work.html">職務経歴</a></li>
-        <li><a href="gallery.html">プロジェクト</a></li>
+        <li><a href="gallery.html">取り組み</a></li>
         <li><a href="index.html#contact">連絡先</a></li>
       </ul>
     </nav>
@@ -26,7 +26,14 @@
     <!-- Main visual -->
     <section class="mv">
       <div class="inner">
-        <div class="mv-img"></div>
+        <div class="mv-img" aria-hidden="true">
+          <!-- 並び順に表示。切り替えは carousel.js -->
+          <div class="mv-slides">
+            <img src="images/ai-chat-architecture.png" alt="">
+            <img src="images/paypay-payment.png" alt="">
+            <video src="images/game-mod.mp4" muted playsinline loop preload="auto"></video>
+          </div>
+        </div>
         <div class="mv-copy">
           <h1>full-stack<br>engineer<br>portfolio</h1>
           <p>計測して、改善する。新規開発から運用まで担当するフルスタックエンジニア、ジャン・ヒョンソクのポートフォリオです。</p>
@@ -75,11 +82,11 @@
           <span>得意領域</span>
         </div>
         <ul class="touch-list">
-          <li><a href="gallery.html#performance"><div class="thumb c-perf"><span>LCP −12%</span></div><p>パフォーマンス・SEO改善</p></a></li>
-          <li><a href="gallery.html#payment"><div class="thumb c-pay"><span>PayPay</span></div><p>決済・課金</p></a></li>
-          <li><a href="gallery.html#ai"><div class="thumb c-ai"><span>AI Chat</span></div><p>AI活用・新規開発</p></a></li>
+          <li><a href="gallery.html#performance"><div class="thumb c-perf"><span>パフォーマンス・SEO改善</span></div></a></li>
+          <li><a href="gallery.html#payment"><div class="thumb c-pay"><span>決済・課金</span></div></a></li>
+          <li><a href="gallery.html#ai"><div class="thumb c-ai"><span>AI活用・新規開発</span></div></a></li>
         </ul>
-        <a class="btn-more" href="gallery.html">プロジェクトを見る</a>
+        <a class="btn-more" href="gallery.html">取り組みを見る</a>
       </div>
     </section>
 
@@ -124,7 +131,10 @@
               韓国放送通信大学 統計・データサイエンス学科 在学中
             </p>
             <h3>好きなこと</h3>
-            <p>個人でのゲーム開発（C#）</p>
+            <p>
+              ゲーム開発<br>
+              絵を描くこと
+            </p>
           </div>
         </div>
       </div>
@@ -148,6 +158,8 @@
   </main>
 
   <footer class="footer">copyright © 2026 ジャン・ヒョンソク</footer>
+
+  <script src="carousel.js"></script>
 
 </body>
 </html>

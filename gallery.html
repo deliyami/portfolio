@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>プロジェクト | ジャン・ヒョンソク</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <a class="logo" href="index.html">full-stack<br>engineer<br>portfolio</a>
+    <nav class="gnav">
+      <ul>
+        <li><a href="work.html">職務経歴</a></li>
+        <li><a href="gallery.html">プロジェクト</a></li>
+        <li><a href="index.html#contact">連絡先</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="sec" style="padding-top:50px">
+    <div class="inner">
+      <div class="sec-title">
+        <h2>Projects</h2>
+        <span>プロジェクト</span>
+      </div>
+
+      <nav class="filter">
+        <a href="#performance">パフォーマンス・SEO</a>
+        <a href="#payment">決済・課金</a>
+        <a href="#ai">AI活用・新規開発</a>
+        <a href="#dx">開発者体験</a>
+      </nav>
+
+      <p class="dots" aria-hidden="true">・・・</p>
+      <section class="g-block" id="performance">
+        <h3>パフォーマンス・SEO</h3>
+
+        <article class="case">
+          <h4>トップページのPSI改善</h4>
+          <dl>
+            <dt>課題</dt><dd>SEO評価にも関わるトップページの表示速度（LCP・TTFB）の改善</dd>
+            <dt>対応</dt><dd>PSI・Lighthouse・CrUXで計測してから原因を絞り込み、FV画像を端末幅に応じたサイズで配信。不要なロジックと preload を削除</dd>
+            <dt>結果</dt><dd>LCP 2,100ms→1,850ms（約12%改善）、TTFB 1,450ms→1,225ms（約16%改善）</dd>
+          </dl>
+        </article>
+
+        <article class="case">
+          <h4>AIを活用したSEO施策</h4>
+          <dl>
+            <dt>課題</dt><dd>一覧ページを中心に、多数のSEO修正を通常の開発と並行して進める必要があった</dd>
+            <dt>対応</dt><dd>パンくずリスト最適化、canonical先へのリンク最適化、重複URLの301統合、H2見出し・説明文の最適化、説明文取得のキャッシュ化。定型的な修正をDevinに任せてレビューに集中</dd>
+            <dt>結果</dt><dd>通常の開発タスクを止めずに、SEO施策を継続的にリリース</dd>
+          </dl>
+        </article>
+
+        <article class="case">
+          <h4>動画埋め込みの実装</h4>
+          <dl>
+            <dt>課題</dt><dd>イベント詳細に動画を掲載したいが、動画追加によるフロントエンドのパフォーマンス低下が懸念された</dd>
+            <dt>対応</dt><dd>既存のイベントテーブルにカラムを追加し、動画を遅延ロードで読み込む実装</dd>
+            <dt>結果</dt><dd>初期表示への影響を抑えて動画掲載を実現</dd>
+          </dl>
+          <div class="case-figs">
+            <figure><img src="images/video-code.png" alt="遅延ロードのコード例" loading="lazy"><figcaption>パフォーマンス改善のコード例</figcaption></figure>
+            <figure><img src="images/video-screen.png" alt="動画埋め込みの実装画面" loading="lazy"><figcaption>実装のスクリーンショット</figcaption></figure>
+          </div>
+        </article>
+      </section>
+
+      <p class="dots" aria-hidden="true">・・・</p>
+      <section class="g-block" id="payment">
+        <h3>決済・課金</h3>
+
+        <article class="case">
+          <h4>新しい決済方法の導入（PayPay）</h4>
+          <dl>
+            <dt>課題</dt><dd>決済代行（SBペイメントサービス）経由で、PayPay決済を新たに導入する</dd>
+            <dt>対応</dt><dd>フロントエンド・バックエンド・決済代行間のリダイレクト処理と、与信・売上確定の状態管理を実装。決済に関わるため、社内のビジネス担当と要件・例外ケースをすり合わせながら開発</dd>
+            <dt>結果</dt><dd>リリース後の想定外の不具合も原因分析・修正を行い、継続的に改善（与信待ち中の表示不具合の修正など）</dd>
+          </dl>
+          <div class="case-figs">
+            <figure><img src="images/paypay-payment.png" alt="PayPay決済フローのシーケンス図" loading="lazy"><figcaption>決済フローのシーケンス図</figcaption></figure>
+            <figure><img src="images/paypay-refund.png" alt="返金フローのシーケンス図" loading="lazy"><figcaption>返金フローのシーケンス図</figcaption></figure>
+          </div>
+        </article>
+
+        <article class="case">
+          <h4>決済までのE2Eテスト自動化</h4>
+          <dl>
+            <dt>課題</dt><dd>決済まわりの不具合を、リリース前に確実に検知したい</dd>
+            <dt>対応</dt><dd>Playwrightを導入し、テスト環境で決済までの一連の流れを自動テスト化</dd>
+            <dt>結果</dt><dd>一般的な決済エラーの発生が0件に</dd>
+          </dl>
+        </article>
+      </section>
+
+      <p class="dots" aria-hidden="true">・・・</p>
+      <section class="g-block" id="ai">
+        <h3>AI活用・新規開発</h3>
+
+        <article class="case">
+          <h4>AIキャラクターチャットサービスの新規開発</h4>
+          <dl>
+            <dt>課題</dt><dd>新規事業として、AIキャラクターチャットサービスを1人で立ち上げる</dd>
+            <dt>対応</dt><dd>コンセプト策定・要件定義・画面/DB設計から、React / Next.js / NestJSでの開発、Stripe決済・Google OAuth認証まで担当。クローズドβ／オープンβのフィードバックでUI・機能を改善し、クリエイター3名の募集、仕様書・損益計算書の作成、法務調査も実施</dd>
+            <dt>インフラ</dt><dd>AWS上で、CloudFront（WAF）・ALBの配下にNext.js / NestJSを載せたEC2をMulti-AZのAuto Scalingで構成し、データはRDS（PostgreSQL）とElastiCache（Redis）に分離。重い処理はSQS（DLQ付き）経由でbatch-workerに非同期で処理させ、画像はS3から配信。LLM API（OpenAI・Anthropic・Google Gemini）はストリーミングで応答を返す。CI/CDはGitHub Actionsでビルドし、ECRへのイメージpush、CloudFrontのキャッシュ無効化、Playwrightでのチェックまでを自動化</dd>
+            <dt>結果</dt><dd>開発は完了したものの、運営・マーケティング体制が整わず事業判断で停止。費用が発生しないようAWSの関連リソースを整理</dd>
+          </dl>
+          <div class="case-figs">
+            <figure><img src="images/ai-chat-architecture.png" alt="AIキャラクターチャットのAWSシステムアーキテクチャ" loading="lazy"><figcaption>システムアーキテクチャ</figcaption></figure>
+          </div>
+        </article>
+
+        <article class="case">
+          <h4>AIを活用した開発フローの整備</h4>
+          <dl>
+            <dt>課題</dt><dd>限られた人数で、開発スピードと品質を両立したい</dd>
+            <dt>対応</dt><dd>SlackからDevinを使えるように導入し、エラー調査にも活用。AGENTS.md・CLAUDE.mdを改善し、プロジェクト用のskill・ローカルプラグインを導入</dd>
+            <dt>結果</dt><dd>月間リリースPR数が6件→10件に</dd>
+          </dl>
+        </article>
+      </section>
+
+      <p class="dots" aria-hidden="true">・・・</p>
+      <section class="g-block" id="dx">
+        <h3>開発者体験</h3>
+
+        <article class="case">
+          <h4>コード品質向上のための導入</h4>
+          <dl>
+            <dt>課題</dt><dd>フロントエンドで型の確認ができず、コードの書き方も統一されていなかった</dd>
+            <dt>対応</dt><dd>TypeScriptを導入して型を確認できるように。ESLintの分析でコード品質を上げ、Prettierでコードの統一性を高めた</dd>
+          </dl>
+          <div class="case-figs is-half">
+            <figure><img src="images/eslint.png" alt="ESLintの設定例" loading="lazy"><figcaption>ESLintのコード例</figcaption></figure>
+          </div>
+        </article>
+
+        <article class="case">
+          <h4>コード品質チェックの自動化（CI）</h4>
+          <dl>
+            <dt>課題</dt><dd>lint・Prettierのチェックを手動で行うと漏れが出る</dd>
+            <dt>対応</dt><dd>GitHub / GitLabそれぞれにymlを用意し、push毎にlint・Prettierを実行。最初は npm run のコマンドを直接書いていたが、<a href="https://github.com/reviewdog/reviewdog">reviewdog</a> を利用する形に改善</dd>
+          </dl>
+          <div class="case-figs">
+            <figure><img src="images/ci.png" alt="CI用のワークフロー例" loading="lazy"><figcaption>CI用のコード例</figcaption></figure>
+          </div>
+        </article>
+
+        <article class="case">
+          <h4>テスト環境の自動デプロイ（CD）</h4>
+          <dl>
+            <dt>課題</dt><dd>テスト環境（AWS EC2）へのデプロイを各自のローカルからコマンドラインで行っており、開発者ごとの環境の違いによってデプロイ時のエラーが起きていた</dd>
+            <dt>対応</dt><dd>GitHub Actionsで、指定したブランチをEC2にデプロイするワークフローを作成。手動実行（workflow_dispatch）にすることで、GitHubの画面からブランチを選んでデプロイできるようにした</dd>
+            <dt>結果</dt><dd>デプロイ方法をコマンドラインからUIに、実行環境をローカルからGitHub Actionsに統一し、環境差によるデプロイエラーを削減</dd>
+          </dl>
+        </article>
+
+        <article class="case">
+          <h4>本番リリースの効率化</h4>
+          <dl>
+            <dt>課題</dt><dd>1件ずつ本番にリリースすると、ブランチのコンフリクトや本番サーバーへの負担が増える。毎日のブランチ作成・削除は手作業だと漏れが出る</dd>
+            <dt>対応</dt><dd>リリース用ブランチの作成・削除を自動化し、まとめてリリースする運用に変更</dd>
+          </dl>
+          <div class="case-figs">
+            <figure><img src="images/branch-create.png" alt="リリースブランチ作成のコード例" loading="lazy"><figcaption>ブランチ作成のコード例</figcaption></figure>
+            <figure><img src="images/branch-delete.png" alt="リリースブランチ削除のコード例" loading="lazy"><figcaption>ブランチ削除のコード例</figcaption></figure>
+          </div>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">copyright © 2026 ジャン・ヒョンソク</footer>
+
+</body>
+</html>

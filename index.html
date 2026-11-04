@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ジャン・ヒョンソク | Full-Stack Engineer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <a class="logo" href="index.html">full-stack<br>engineer<br>portfolio</a>
+    <nav class="gnav">
+      <ul>
+        <li><a href="work.html">職務経歴</a></li>
+        <li><a href="gallery.html">プロジェクト</a></li>
+        <li><a href="index.html#contact">連絡先</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Main visual -->
+    <section class="mv">
+      <div class="inner">
+        <div class="mv-img"></div>
+        <div class="mv-copy">
+          <h1>full-stack<br>engineer<br>portfolio</h1>
+          <p>計測して、改善する。新規開発から運用まで担当するフルスタックエンジニア、ジャン・ヒョンソクのポートフォリオです。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Highlights -->
+    <section class="sec" id="info">
+      <div class="inner">
+        <div class="sec-title">
+          <h2>Highlights</h2>
+          <span>主な実績</span>
+        </div>
+        <ul class="info-list">
+          <li>
+            <p class="title">トップページのLCPを2,100ms→1,850ms（約12%改善）、TTFBを1,450ms→1,225ms（約16%改善）</p>
+            <div class="meta"><time datetime="2026-09">2026.09</time><span class="tag">パフォーマンス</span></div>
+          </li>
+          <li>
+            <p class="title">AI（Devin・Claude Code）を活用した開発フローを整備し、月間リリースPR数を6件→10件に</p>
+            <div class="meta"><time datetime="2026">2026</time><span class="tag">AI活用</span></div>
+          </li>
+          <li>
+            <p class="title">Androidアプリ（Java）のGoogle Play要件対応（Billing Library・Target API Level）を期限内に完了</p>
+            <div class="meta"><time datetime="2026-08">2026.08</time><span class="tag">Android</span></div>
+          </li>
+          <li>
+            <p class="title">AIキャラクターチャットサービスを1人で企画・設計・開発し、AWS本番環境まで構築</p>
+            <div class="meta"><time datetime="2026-02">2026.02–06</time><span class="tag">新規開発</span></div>
+          </li>
+          <li>
+            <p class="title">新しい決済方法（PayPay）を導入、Playwrightで決済までのE2Eテストを自動化</p>
+            <div class="meta"><time datetime="2025">2023–2025</time><span class="tag">決済</span></div>
+          </li>
+        </ul>
+        <a class="btn-more" href="work.html">職務経歴を見る</a>
+      </div>
+    </section>
+
+    <!-- Strengths -->
+    <section class="sec" id="touch">
+      <div class="inner">
+        <div class="sec-title">
+          <h2>Strengths</h2>
+          <span>得意領域</span>
+        </div>
+        <ul class="touch-list">
+          <li><a href="gallery.html#performance"><div class="thumb c-perf"><span>LCP −12%</span></div><p>パフォーマンス・SEO改善</p></a></li>
+          <li><a href="gallery.html#payment"><div class="thumb c-pay"><span>PayPay</span></div><p>決済・課金</p></a></li>
+          <li><a href="gallery.html#ai"><div class="thumb c-ai"><span>AI Chat</span></div><p>AI活用・新規開発</p></a></li>
+        </ul>
+        <a class="btn-more" href="gallery.html">プロジェクトを見る</a>
+      </div>
+    </section>
+
+    <!-- Profile -->
+    <section class="sec" id="profile">
+      <div class="inner">
+        <div class="sec-title">
+          <h2>Profile</h2>
+          <span>プロフィール</span>
+        </div>
+        <div class="profile">
+          <div class="profile-left">
+            <div class="profile-img"></div>
+            <p class="profile-name">ジャン・ヒョンソク</p>
+            <div class="sns">
+              <a href="https://github.com/deliyami" aria-label="GitHub">GH</a>            </div>
+          </div>
+          <div class="profile-text">
+            <p>
+              韓国出身、東京在住。韓国の大学でコンピュータ情報を学び、2023年に株式会社リンクバルへ新卒入社。<br>
+              「街コンジャパン」のフルスタックエンジニアとして、決済・SEO・パフォーマンス改善などを担当しています。<br>
+              2026年には新規サービスの企画から設計・開発・AWS環境構築までを1人で担当しました。<br>
+              開発プロセスの効率化とユーザー体験の向上を重視し、継続的な改善に取り組んでいます。
+            </p>
+            <h3>大切にしていること</h3>
+            <p>
+              計測してから原因を絞り込み、効果のある施策を選ぶこと<br>
+              影響範囲を限定した段階的なリリース<br>
+              仕様の判断理由をPRに日本語で残し、チームと認識を合わせること
+            </p>
+            <h3>技術スタック</h3>
+            <p>
+              言語 / TypeScript　JavaScript　Ruby（得意）　Java　C#<br>
+              フレームワーク / Vue.js　Nuxt.js　Rails　React　Next.js　NestJS<br>
+              DB / MySQL　PostgreSQL　Redis　Elasticsearch<br>
+              インフラ・ツール / AWS　GitHub Actions　GitLab CI　Playwright　Devin　Claude Code
+            </p>
+            <h3>資格・学習</h3>
+            <p>
+              JLPT N1（2023年1月）<br>
+              基本情報技術者（2024年1月）<br>
+              韓国放送通信大学 統計・データサイエンス学科 在学中
+            </p>
+            <h3>好きなこと</h3>
+            <p>個人でのゲーム開発（C#）</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="sec" id="contact">
+      <div class="inner">
+        <div class="sec-title">
+          <h2>Contact</h2>
+          <span>連絡先</span>
+        </div>
+        <div class="notice">
+          <h3>ご連絡はこちらから</h3>
+          <ul class="contact-list">
+            <li>メール / <a href="mailto:dkdidudtn@gmail.com">dkdidudtn@gmail.com</a></li>
+            <li>GitHub / <a href="https://github.com/deliyami">github.com/deliyami</a></li>          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">copyright © 2026 ジャン・ヒョンソク</footer>
+
+</body>
+</html>
